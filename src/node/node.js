@@ -19,8 +19,9 @@ http.createServer(function (req, res) {
     res.end(data);
   };
 
-  // response header
+  // response headers
   res.writeHead(200, {'Content-Type': 'application/json'});
+  res.setHeader('Access-Control-Allow-Origin', 'http://lab.antoinemineau.com');
 
   // twitter call
   var config = {
