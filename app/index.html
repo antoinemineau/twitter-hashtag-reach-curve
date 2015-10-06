@@ -11,7 +11,7 @@
     <link href="//www.google-analytics.com" rel="dns-prefetch">
     <link href="//ajax.googleapis.com" rel="dns-prefetch">
     <link href="assets/css/style.min.css" rel="stylesheet">
-    <link href="asssets/css/animate.min.css" rel="stylesheet">
+    <link href="assets/css/animate.min.css" rel="stylesheet">
 
     <script src="assets/components/modernizr.js"></script>
 
@@ -19,15 +19,28 @@
   <body>
 
     <header class="header" role="banner">
-      Twitter Hashtag Reach Curve
+      <h1 id="app-title">Twitter hashtag reacher curve</h1>
+      <p id="app-description">A simple app that display pretilly the twitter hashtag reach over last 6 days</p>
     </header>
 
     <main class="main" role="main">
-
-        <form id="twitter-reach-hashtag-form">
-          <input id="twitter-reach-hashtag-form-hashtag" type="text" name="hashtag" />
-          <input type="submit" value="Afficher" />
-        </form>
+        <div id="form-container" class="animated">
+          <span id="form-info">Type your hashtag</span>
+          <span id="form-info-example">(ex: #BarackObama)</span>
+          <form id="form">
+            <input id="input-hashtag" type="text" name="hashtag" />
+            <input type="submit" value="Afficher" />
+          </form>
+        </div>
+        <div id="result" class="animated visibility-hidden">
+          <div id="svg-container">
+            <svg viewBox="0 0 100 100" preserveAspectRatio="none">
+              <path class="path" d=""/>
+              <text class="text" x="20" y="70">3000</text>
+            </svg>
+          </div>
+          <span id="form-retry">Try a new hashtag ?</span>
+        </div>
     </main>
 
     <footer class="footer" role="contentinfo">
